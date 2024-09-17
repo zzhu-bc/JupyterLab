@@ -1,0 +1,52 @@
+{
+    "binance":{
+        "spot":{
+            "exchange": "binance",
+            "symbol": "usdt"
+        },
+        "perp":{
+            "exchange": "binance-futures",
+            "symbol": "usdt"
+        }
+    },
+    "bybit":{
+        "spot":{
+            "exchange": "bybit-spot",
+            "symbol": "usdt"
+        },
+        "perp":{
+            "exchange": "bybit",
+            "symbol": "usdt"
+        }
+    },
+    "okx":{
+        "spot":{
+            "exchange": "okex",
+            "symbol": "-usdt"
+        },
+        "perp":{
+            "exchange": "okex-swap",
+            "symbol": "-usdt-swap"
+        }
+    },
+    "huobi":{
+        "spot":{
+            "exchange": "huobi",
+            "symbol": "usdt"
+        },
+        "perp":{
+            "exchange": "huobi-dm-linear-swap",
+            "symbol": "-usdt"
+        }
+    },
+    "gate":{
+        "spot":{
+            "exchange": "gate-io",
+            "symbol": "_usdt"
+        },
+        "perp":{
+            "exchange": "gate-io-futures",
+            "symbol": "_usdt"
+        }
+    }
+}
