@@ -48,5 +48,22 @@
             "exchange": "gate-io-futures",
             "symbol": "_usdt"
         }
+    },
+    "kucoin":{
+        "spot":{
+            "exchange": "kucoin",
+            "symbol": "-usdt"
+        }
+    },
+    "kraken":{
+        "spot":{
+            "exchange": "kraken",
+            "symbol": "-usd"
+        },
+        "perp":{
+            "exchange": "cryptofacilities",
+            "symbol": "-perpetual"
+        }
     }
+    
 }

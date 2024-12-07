@@ -26,11 +26,27 @@ class TardisLoader:
             return \
                 f"{self._root_dir}/{data_type}_{exchange}_{symbol}" \
                 f"/{exchange}_{data_type}_{date}_{symbol}.csv.gz"
-
-        dfs = [
-            pl.read_csv(path(str(d.date()), data_type, exchange, symbol))
-            for d in pd.date_range(start, end)
-        ]
+        
+        # Override the data type for specific columns
+        override_schema = {
+            "bid_price": pl.Float64,
+            "bid_amount": pl.Float64,
+            "ask_price": pl.Float64,
+            "ask_amount": pl.Float64
+        }
+        
+        try:
+            dfs = [
+                pl.read_csv(path(str(d.date()), data_type, exchange, symbol), schema_overrides=override_schema)
+                for d in pd.date_range(start, end)
+            ]
+        except:
+            self.download(start, end, data_type, exchange, symbol)
+            dfs = [
+                pl.read_csv(path(str(d.date()), data_type, exchange, symbol), schema_overrides=override_schema)
+                for d in pd.date_range(start, end)
+            ]
+        
         df = pl.concat(dfs).sort("timestamp")
 
         # Parse the timestamp column as microseconds
