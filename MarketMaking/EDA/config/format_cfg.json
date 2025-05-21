@@ -64,6 +64,12 @@
             "exchange": "cryptofacilities",
             "symbol": "-perpetual"
         }
+    },
+    "coinbase":{
+        "spot":{
+            "exchange": "coinbase",
+            "symbol": "-usd"
+        }
     }
     
 }
