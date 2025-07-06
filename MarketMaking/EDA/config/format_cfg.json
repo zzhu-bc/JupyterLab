@@ -70,6 +70,20 @@
             "exchange": "coinbase",
             "symbol": "-usd"
         }
+    },
+    "deribit":{
+        "spot":{
+            "exchange": "deribit",
+            "symbol": "-spot"
+        },
+        "perp":{
+            "exchange": "deribit",
+            "symbol": "-perpetuals"
+        },
+        "futures":{
+            "exchange": "deribit",
+            "symbol": "-futures"
+        }
     }
     
 }
